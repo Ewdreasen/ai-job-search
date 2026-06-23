@@ -1,7 +1,8 @@
 ---
 name: job-scraper
 description: >
-  Scrapes Danish job sites for new positions matching your profile. Deduplicates across runs.
+  Searches US job sites and a curated list of target employers for new positions matching
+  your profile. Deduplicates across runs.
   Triggers on: job scrape, find jobs, search jobs, new jobs, job search, scrape jobs, /scrape
 allowed-tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch, Agent, AskUserQuestion
 ---
@@ -12,7 +13,10 @@ allowed-tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch, Agent, AskUse
 
 ## How It Works
 
-This skill searches multiple Danish job sites using targeted queries based on your profile, deduplicates against previously seen jobs and the application tracker, and presents new matches with a quick fit assessment.
+This skill runs two passes: (a) a **keyword pass** over US job sites using targeted queries
+from `search-queries.md`, and (b) a **target-org pass** that checks each named employer in
+`target-orgs.md` directly. It deduplicates both against previously seen jobs and the
+application tracker, then presents new matches with a quick fit assessment.
 
 ## Invocation
 
@@ -23,7 +27,7 @@ The user triggers this skill by saying things like:
 - "/scrape"
 
 Optional arguments:
-- A focus area, e.g. "/scrape data science" or "/scrape geophysics"
+- A focus area, e.g. "/scrape data science" or "/scrape analytics engineering"
 - "broad" to run all search categories, e.g. "/scrape broad"
 
 ---
@@ -34,7 +38,8 @@ Optional arguments:
 
 1. Read `job_scraper/seen_jobs.json` (create if missing - start with `{"seen": {}}`)
 2. Read `job_search_tracker.csv` to extract already-applied companies+roles
-3. Read `search-queries.md` (this directory) for the search strategy
+3. Read `search-queries.md` (this directory) for the keyword search strategy
+4. Read `target-orgs.md` (this directory) for the direct employer watch-list
 
 ### Step 1: Search
 
@@ -43,9 +48,24 @@ Run **WebSearch** queries from `search-queries.md`. By default, run the top 3 pr
 If the user specified a focus area (e.g. "data science"), prioritize queries from that category.
 
 For each search:
-- Use `WebSearch` with site-specific queries (jobindex.dk, linkedin.com/jobs, karriere.dk, etc.)
-- Target your configured geographic area
+- Use `WebSearch` with site-specific queries (linkedin.com/jobs, idealist.org, builtin.com, techjobsforgood.com, usajobs.gov, etc.)
+- Target your configured geographic area (Seattle metro / Washington / Remote)
 - Look for postings from the last 14 days
+
+### Step 1b: Target-Org Watch
+
+After the keyword pass, iterate every org in `target-orgs.md`. For each:
+
+- **`METHOD: json`** — WebFetch the `Feed` URL and parse positions directly from JSON
+  (e.g. Community Solutions' Breezy board at `https://community-solutions.breezy.hr/json`).
+  Prefer this over scraping the human portal. If the feed 404s, fall back to the `Careers` URL.
+- **`METHOD: fetch`** — WebFetch the `Careers` (and, if present, `Portal`) URL and extract
+  current openings from the HTML (Paycom, iCIMS, Workday portals have no clean JSON).
+- **`METHOD: search`** — run `"<Org>" jobs careers` plus `site:linkedin.com/jobs "<Org>"`
+  and any org-specific queries noted in its block (Idealist, etc.).
+
+Tag every target-org result with `source: target-org` and the org name. These are the
+priority list: surface them even on a narrow/focused run, not just on `broad`.
 
 ### Step 2: Fetch & Parse
 
@@ -117,7 +137,7 @@ If the user decides to apply to any job, add a row to `job_search_tracker.csv`.
 
 1. **Never fabricate job postings.** Only present jobs found via actual WebSearch/WebFetch results.
 2. **Respect deduplication.** Always check seen_jobs.json AND job_search_tracker.csv before presenting.
-3. **Focus on configured geographic area.** Skip jobs that require relocation or are clearly outside commute range.
+3. **Focus on configured geographic area.** Honor `search-queries.md`: Seattle metro / Puget Sound (in-person or hybrid) and Remote (US). Skip onsite-only roles outside Puget Sound unless relocation is explicitly desired. Target-org roles that are Remote always qualify.
 4. **Only open positions.** Skip postings with expired deadlines or those marked as closed.
 5. **Be efficient with WebFetch.** Don't fetch every search result - use titles and snippets to pre-filter before fetching.
 6. **Parallel searches.** Use the Agent tool or parallel WebSearch calls to speed up the search phase.
