@@ -1,22 +1,14 @@
----
-name: job-scraper
-description: >
-  Searches US job sites and a curated list of target employers for new positions matching
-  your profile. Deduplicates across runs.
-  Triggers on: job scrape, find jobs, search jobs, new jobs, job search, scrape jobs, /scrape
-allowed-tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch, Agent, AskUserQuestion
----
-
 # Job Scraper
+
+**name:** job-scraper
+**description:** Searches US job sites and a curated list of target employers for new positions matching your profile. Deduplicates across runs. Triggers on: job scrape, find jobs, search jobs, new jobs, job search, scrape jobs, /scrape
+**allowed-tools:** Read, Write, Edit, Glob, Grep, WebFetch, WebSearch, Agent, AskUserQuestion
 
 ---
 
 ## How It Works
 
-This skill runs two passes: (a) a **keyword pass** over US job sites using targeted queries
-from `search-queries.md`, and (b) a **target-org pass** that checks each named employer in
-`target-orgs.md` directly. It deduplicates both against previously seen jobs and the
-application tracker, then presents new matches with a quick fit assessment.
+This skill runs two passes: (a) a **keyword pass** over US job sites using targeted queries from `search-queries.md`, and (b) a **target-org pass** that checks each named employer in `target-orgs.md` directly. It deduplicates both against previously seen jobs and the application tracker, then presents new matches with a quick fit assessment.
 
 ## Invocation
 
@@ -27,7 +19,7 @@ The user triggers this skill by saying things like:
 - "/scrape"
 
 Optional arguments:
-- A focus area, e.g. "/scrape data science" or "/scrape analytics engineering"
+- A focus area, e.g. "/scrape data science" or "/scrape geophysics"
 - "broad" to run all search categories, e.g. "/scrape broad"
 
 ---
@@ -125,7 +117,7 @@ For each high-match job, add 2-3 bullet points:
 After presenting, ask:
 > "Want me to evaluate any of these in detail? Just give me the number(s)."
 
-If the user picks a number, invoke the **job-application-assistant** skill workflow (fit evaluation first, then CV + cover letter if approved).
+If the user picks a number, hand off to the **`job-application`** skill (Ewan's package builder), passing the posting URL and this scraper's quick fit signal. That skill owns the candidate profile and runs its own fit analysis first, then resume + cover + supplementals + interview prep. Do **not** use this repo's `job-application-assistant` for Ewan's applications — the `job-application` skill supersedes it and is the single source of truth for his profile.
 
 ### Step 6: Update Tracker (Optional)
 
