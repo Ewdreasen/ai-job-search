@@ -8,7 +8,7 @@ An AI-powered job application framework built on [Claude Code](https://claude.co
 
 ## What this is
 
-A structured workflow that turns Claude Code into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. The job portal search skills are built for the Danish market (Jobindex, Jobnet, Akademikernes Jobbank, etc.), but the pattern is designed to be swapped for your local job boards.
+A structured workflow that turns Claude Code into a full-stack job application assistant. The core workflow (self-profiling, fit evaluation, and the drafter-reviewer application pipeline) is **language- and country-agnostic**. Job discovery runs two passes: a keyword search over US job sites (configured in `search-queries.md`) and a direct watch-list of target employers (`target-orgs.md`), checked via their public ATS feeds or career pages. The pattern is designed to be re-pointed at any market by editing those two config files.
 
 ```
 /setup          /scrape              /apply <url>
@@ -32,7 +32,6 @@ The framework encodes career guidance best practices, including structured evalu
 
 - [Claude Code](https://claude.com/claude-code) (CLI)
 - Python 3.10+
-- [Bun](https://bun.sh) (for Danish job search CLI tools)
 - LaTeX distribution with `lualatex` and `xelatex`: [TeX Live](https://tug.org/texlive/) or [MiKTeX](https://miktex.org/). The CV compiles with `lualatex` (pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors); the cover letter compiles with `xelatex` because `cover.cls` requires `fontspec`.
 
 ## Quick start
@@ -44,14 +43,12 @@ gh repo fork MadsLorentzen/ai-job-search --clone
 cd ai-job-search
 ```
 
-### 2. Install job search tools
+### 2. Configure job discovery
 
-```bash
-cd .agents/skills/jobbank-search/cli && bun install && cd ../../../..
-cd .agents/skills/jobdanmark-search/cli && bun install && cd ../../../..
-cd .agents/skills/jobindex-search/cli && bun install && cd ../../../..
-cd .agents/skills/jobnet-search/cli && bun install && cd ../../../..
-```
+Job discovery needs no install step. Edit the two config files to match your search:
+
+- `.claude/skills/job-scraper/search-queries.md` — US job sites, target roles/skills, and location filter for the keyword pass.
+- `.claude/skills/job-scraper/target-orgs.md` — named employers to check every run, with each org's ATS feed or career-page URL.
 
 ### 3. Set up your profile
 
@@ -74,7 +71,7 @@ This searches multiple job portals for positions matching your profile, deduplic
 ### 5. Apply to a job
 
 ```bash
-/apply https://jobindex.dk/job/1234567
+/apply https://job-boards.greenhouse.io/example/jobs/1234567
 ```
 
 If the URL can't be fetched (some job portals block automated access), you can paste the job description directly instead:
@@ -116,13 +113,11 @@ ai-job-search/
 │   │   │   ├── 06-cover-letter-templates.md # LaTeX cover letter templates
 │   │   │   └── 07-interview-prep.md   # STAR examples + interview framework
 │   │   ├── job-scraper/               # Job search orchestration
+│   │   │   ├── SKILL.md               # Two-pass scraper (keyword + target-org)
+│   │   │   ├── search-queries.md      # US job sites, roles, location filter
+│   │   │   └── target-orgs.md         # Named-employer watch-list (ATS feeds / career pages)
 │   │   └── upskill/                   # /upskill skill gap analysis and learning plan
 │   └── settings.local.json            # Claude Code permissions
-├── .agents/skills/                    # Job portal CLI tools (Denmark)
-│   ├── jobbank-search/                # Akademikernes Jobbank
-│   ├── jobdanmark-search/             # Jobdanmark.dk
-│   ├── jobindex-search/               # Jobindex.dk
-│   └── jobnet-search/                 # Jobnet.dk (government portal)
 ├── cv/
 │   └── main_example.tex               # moderncv LaTeX template
 ├── cover_letters/
@@ -198,7 +193,7 @@ The CV uses [moderncv](https://ctan.org/pkg/moderncv) (banking style). The cover
 
 ### Job search tools
 
-The four CLI tools in `.agents/skills/` are specific to the **Danish job market** (Jobbank, Jobdanmark, Jobindex, Jobnet). They demonstrate the pattern for building job portal integrations. If you're in a different country, you can build equivalent tools for your local job portals using the same structure.
+Job discovery is driven by two config files in `.claude/skills/job-scraper/`, not by per-portal CLI tools. Edit `search-queries.md` to change which US job sites, roles, skills, and locations the keyword pass targets, and `target-orgs.md` to maintain the named-employer watch-list. Each watch-list entry records how to reach that employer: a public ATS JSON feed (Greenhouse, Lever, Ashby, Breezy) where one exists, otherwise the career-page URL to fetch or a search to run. To re-point the whole system at a different market, edit these two files — no code changes needed.
 
 ### Salary benchmarking
 
