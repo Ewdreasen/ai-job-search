@@ -37,6 +37,10 @@ Roles at these orgs should be surfaced even on a "narrow" run — they are the p
 | Community Technology Alliance (CTA) | none / ad hoc | search | verified |
 | U.S. Digital Response (USDR) | careers page / Tech Jobs for Good | fetch | confirm |
 | Mission Driven Data | none / ad hoc (LinkedIn) | search | verified |
+| Coefficient Giving | Ashby | json | verified |
+| 80,000 Hours job board (EA aggregator) | custom board | fetch | confirm |
+| King County, WA | NEOGOV | fetch | confirm |
+| City of Seattle | NEOGOV | fetch | confirm |
 
 ## Org details
 
@@ -95,6 +99,43 @@ Roles at these orgs should be surfaced even on a "narrow" run — they are the p
   roles ad hoc via LinkedIn (e.g. a recent Solutions Consultant opening). Run
   `site:linkedin.com/company/mission-driven-data` and `"Mission Driven Data" hiring`.
   Warm-contact org (Nicole Morris, Katie) — flag any opening prominently.
+
+### Coefficient Giving
+- **Method:** json
+- **Feed:** https://api.ashbyhq.com/posting-api/job-board/coefficientgiving
+- **Careers (human):** https://jobs.ashbyhq.com/coefficientgiving
+- **Notes:** Grantmaking/research nonprofit (Global Health & Wellbeing, Longtermism;
+  formerly Open Philanthropy-adjacent EA funder). Ashby exposes a public posting API at
+  `api.ashbyhq.com/posting-api/job-board/{slug}` — prefer the JSON over the portal HTML.
+  Many roles are Remote USA or Remote Global; ops/program/research postings can include
+  data-adjacent work. Uses compensated blind work-tests in lieu of resume-heavy screening.
+
+### 80,000 Hours job board (EA aggregator)
+- **Method:** fetch (org-filter URLs only — see below)
+- **Board:** https://jobs.80000hours.org/
+- **Org-filtered views:** e.g. https://jobs.80000hours.org/organisations/coefficient-giving
+- **Notes:** Aggregates high-impact/EA roles across Coefficient Giving, CEA, Open Phil, and
+  many mission-driven orgs. Not a single employer — an aggregator.
+  **Verified 2026-06-24:** neither the main board HTML nor `site:jobs.80000hours.org` search
+  exposes individual job postings — both only surface *organisation* pages. So do NOT rely on
+  a `site:` keyword sweep here. Instead, WebFetch the per-org `/organisations/<slug>` URL for
+  each EA org you care about (coefficient-giving, centre-for-effective-altruism, open-philanthropy,
+  etc.) and read the roles listed there. Filter to Remote / US-eligible + analytical work.
+
+### King County, WA
+- **Method:** fetch (NEOGOV)
+- **Careers:** https://www.governmentjobs.com/careers/kingcounty
+- **Notes:** Local public-sector pipeline. Filter for analyst / data / program roles in
+  DCHS (Dept of Community & Human Services), housing, and homelessness divisions. In-person
+  or hybrid Puget Sound — clears the location filter. NEOGOV portals are JS-rendered; if the
+  fetch returns 0 jobs, fall back to `site:governmentjobs.com/careers/kingcounty <keyword>`.
+
+### City of Seattle
+- **Method:** fetch (NEOGOV)
+- **Careers:** https://www.governmentjobs.com/careers/seattle
+- **Notes:** Local public-sector pipeline (Human Services Dept, Innovation & Performance team).
+  Filter for analyst / data / research roles. Same NEOGOV JS-render caveat as King County —
+  use the `site:` search fallback if the portal returns nothing.
 
 ## Adding orgs
 
