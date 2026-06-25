@@ -12,6 +12,18 @@ Primary (US job market):
 - **techjobsforgood.com** - public-interest / civic tech job board
 - **usajobs.gov** - federal roles (official; has a free API if you want structured pulls)
 - **workforcegps.org / npjobfinder.org** - nonprofit boards (supplemental)
+- **governmentjobs.com / NEOGOV** - where WA public agencies actually post (Seattle Housing Authority, King County, City of Seattle); your local public-sector pipeline
+- **foundationlist.org** - foundation/nonprofit roles; strong for grants & program ops
+- **jobs.philanthropy.com** (Chronicle of Philanthropy) - philanthropy/grantmaking ops
+
+Values-aligned / high-impact (EA-adjacent; your expanded remote-ops scope):
+- **jobs.80000hours.org** - canonical EA/high-impact board; Coefficient Giving, CEA, Open Phil all post here
+- **effectivealtruism.org/opportunities** - EA Opportunities Board
+- **theimpactjob.com** - social-impact aggregator with good remote filtering
+- **remoteimpact.org** - remote-only mission roles
+
+Housing / homelessness sector-specific:
+- **National Alliance to End Homelessness** & **National Housing Conference (NHC)** career centers
 
 Aggregators with structured APIs (optional, if you wire them later):
 - **Adzuna** - free API key, US listings across boards
@@ -68,6 +80,38 @@ site:linkedin.com/jobs "civic technology" OR "govtech" data Remote
 site:linkedin.com/jobs "data" engineer OR analyst government OR nonprofit Remote
 site:usajobs.gov data analyst   (or use the USAJOBS keyword search directly)
 "public interest technology" data role remote
+```
+
+### Priority 5: Remote operations roles at values-aligned orgs
+
+Broadens beyond pure data roles. The strongest *remote + values* fits often surface as
+operations/program roles at mission-driven orgs (effective-altruism funders, civic-tech,
+housing/health nonprofits). These value analytical generalists, and ops work frequently
+includes grants tracking, light data analysis, and reporting — a viable bridge.
+
+```
+site:jobs.ashbyhq.com "operations associate" OR "operations coordinator" remote
+site:linkedin.com/jobs "operations associate" OR "operations manager" remote nonprofit OR "social impact"
+"remote" "operations" associate OR coordinator "effective altruism" OR "mission-driven"
+site:jobs.lever.co OR site:boards.greenhouse.io operations remote nonprofit
+site:techjobsforgood.com operations
+"program operations" OR "grants operations" analyst OR associate remote
+```
+
+Screen for: Remote (US) or Pacific-aligned, analytical/data-adjacent responsibilities, and
+a mission you'd stand behind. De-prioritize pure admin/exec-assistant roles with no data hook.
+
+### Priority 6: Board-specific sweeps
+
+Run these against the boards added above when doing a broad sweep.
+
+```
+site:jobs.80000hours.org operations OR data OR grants remote
+site:foundationlist.org grants OR program OR data analyst remote
+site:jobs.philanthropy.com grants OR program operations remote
+site:theimpactjob.com data OR operations remote
+site:remoteimpact.org operations OR data
+"National Alliance to End Homelessness" OR "National Housing Conference" jobs data OR analyst
 ```
 
 ## Location Filter
