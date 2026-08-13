@@ -22,15 +22,15 @@
 
 % Color definitions
 \usepackage[usenames,dvipsnames]{xcolor} 
-\definecolor{date}{HTML}{666666} 
-\definecolor{primary}{HTML}{2b2b2b} 
-\definecolor{headings}{HTML}{6A6A6A}
-\definecolor{subheadings}{HTML}{333333}
+\definecolor{date}{HTML}{000000} 
+\definecolor{primary}{HTML}{000000} 
+\definecolor{headings}{HTML}{000000}
+\definecolor{subheadings}{HTML}{000000}
 
 % Set main fonts
 \usepackage{fontspec}
-\setmainfont[Color=primary, Path = OpenFonts/fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta]{Lato-Lig}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = OpenFonts/fonts/raleway/]{Raleway-ExtraLight}
+\setmainfont[Color=primary, Path = OpenFonts/fonts/Calibri/, Extension=.ttf, BoldFont=calibri_bold, ItalicFont=CALIBRI, ItalicFeatures={FakeSlant=0.2}, BoldItalicFont=calibri_bold, BoldItalicFeatures={FakeSlant=0.2}]{CALIBRI}
+\setsansfont[Scale=MatchLowercase, Path = OpenFonts/fonts/Calibri/, Extension=.ttf, BoldFont=calibri_bold, ItalicFont=CALIBRI, ItalicFeatures={FakeSlant=0.2}, BoldItalicFont=calibri_bold, BoldItalicFeatures={FakeSlant=0.2}]{CALIBRI}
 
 % Date command
 \usepackage[absolute]{textpos}
@@ -38,7 +38,7 @@
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
 \newcommand{\lastupdated}{\begin{textblock}{60}(155,5)
-\color{date}\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont 
+\color{date}\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{8pt}{10pt}\selectfont 
 Last Updated on \today
 \end{textblock}}
 
@@ -46,12 +46,12 @@ Last Updated on \today
 \newcommand{\namesection}[3]{
 \centering{
 \fontsize{40pt}{60pt}
-\fontspec[Path = OpenFonts/fonts/lato/]{Lato-Hai}\selectfont #1 
-\fontspec[Path = OpenFonts/fonts/lato/]{Lato-Lig}\selectfont #2
+\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\selectfont #1 
+\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\selectfont #2
 } \\[5pt]
 \centering{
 \color{headings}
-\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{14pt}\selectfont #3}
+\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{11pt}{14pt}\selectfont #3}
 \noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.0pt}}
 \vspace{0pt}
 }
@@ -64,22 +64,22 @@ Last Updated on \today
 
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec[Path = OpenFonts/fonts/lato/]{Lato-Lig}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
+\scshape\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{
-\color{subheadings}\fontspec[Path = OpenFonts/fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\color{subheadings}\fontspec[Path = OpenFonts/fonts/Calibri/]{calibri_bold.ttf}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{
-\color{subheadings}\fontspec[Path = OpenFonts/fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\color{subheadings}\fontspec[Path = OpenFonts/fonts/Calibri/]{calibri_bold.ttf}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 % Descriptors command
 \newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\color{subheadings}\raggedright\scshape\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{
-\color{headings}\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
+\color{headings}\raggedright\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{
@@ -87,15 +87,15 @@ Last Updated on \today
 {\end{itemize}\vspace{-\topsep}}
 
 % Cover Letter
-\newcommand{\companyname}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/lato/]{Lato-Bol}\fontsize{12pt}{14pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\companyname}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/Calibri/]{calibri_bold.ttf}\fontsize{12pt}{14pt}\selectfont {#1 \\} \normalfont}
 
-\newcommand{\companyaddress}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\}\mbox{}\\\mbox{}\\ \normalfont}
+\newcommand{\companyaddress}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{11pt}{13pt}\selectfont {#1 \\}\mbox{}\\\mbox{}\\ \normalfont}
 
-\newcommand{\currentdate}[1]{\raggedleft\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\currentdate}[1]{\raggedleft\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Letter content command
-\newcommand{\lettercontent}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\}\mbox{}\\ \normalfont}
+\newcommand{\lettercontent}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{11pt}{13pt}\selectfont {#1 \\}\mbox{}\\ \normalfont}
 
-\newcommand{\closing}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\}\mbox{}\\\mbox{}\\ \normalfont}
+\newcommand{\closing}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{11pt}{13pt}\selectfont {#1 \\}\mbox{}\\\mbox{}\\ \normalfont}
 
-\newcommand{\signature}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\newcommand{\signature}[1]{\raggedright\fontspec[Path = OpenFonts/fonts/Calibri/]{CALIBRI.ttf}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}

@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Ewan Andreasen
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -18,24 +17,25 @@
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
+\usepackage{needspace}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Ewan Andreasen - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Ewan}{Andreasen}
+\address{Seattle, WA}{}{}
+\phone[mobile]{(206) 880-9905}
+\email{EwanAndreasen@proton.me}
+\extrainfo{\href{https://linkedin.com/in/ewanandreasen}{LinkedIn}}
 
 \begin{document}
 
@@ -46,7 +46,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Data analyst with ten years in Seattle's housing and homelessness sector, spanning direct service, program management, and data-infrastructure roles at DESC, Plymouth Housing, and KCRHA. Deep working knowledge of Medicaid billing data (837 EDI), HMIS, and the compliance environment governing permanent supportive housing. Builds SQL, Power BI, and Tableau reporting that turns program data into actionable insight for operational and compliance teams.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +56,17 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Data \& Analytics}: SQL (PostgreSQL, SQLite), Python, R, DAX; ETL pipeline design; data validation \& QA; 837 EDI claims modeling.
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Visualization \& BI}: Power BI, Tableau, Apache Superset, QGIS; interactive dashboard development; geospatial analysis.
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Automation \& Integration}: Power Automate, PowerApps, API integration, workflow automation, low-code development.
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Database \& Systems}: PostgreSQL, CHASERS, Salesforce, RelyHealth, HMIS (King County).
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Domain Expertise}: Permanent supportive housing operations, Medicaid fee-for-service billing (837 EDI), HUD CoC \& HMIS compliance, 1115 waiver, contract reporting.
+
+\item \textbf{Infrastructure \& Tools}: Azure, Docker, GitHub; Agile/Scrum (CSPO); AI-assisted development (Claude Code).
 
 \end{itemize}
 
@@ -76,32 +78,47 @@
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- KCRHA ---
+\needspace{5\baselineskip}
+\item{\cventry{2025--Present}{Manager, Continuous System Improvement}{King County Regional Homelessness Authority}{Seattle, WA}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Spearheaded the reboot of the Regional Services Database, proposing a public data utility model to enable cross-sector data sharing.
+    \item Developed and deployed real-time Tableau dashboards in Azure for resource allocation and strategic planning across King County's homelessness response system.
+    \item Coordinated the 2026 Point-in-Time Count: 28 survey sites, 150+ volunteers, 32 staff surveyors, $\sim$2,000 surveys, and a \$250K budget.
+    \item Champion open-source analytics (Apache Superset, QGIS, Human Services Data Specification); administer Salesforce-based data-collection workflows.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Plymouth Housing ---
+\needspace{5\baselineskip}
+\item{\cventry{2021--2025}{Manager, Healthcare Integration}{Plymouth Housing}{Seattle, WA}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Built and maintained ETL pipelines feeding real-time Power BI dashboards tracking revenue, program health, and Medicaid billing compliance.
+    \item Developed a custom Medicaid enrollment/billing application in PowerApps that drove a 248\% increase in payment-processing volume and \$1.5M in new annual revenue.
+    \item Constructed 837 EDI claims data tables for FCS Medicaid billing, self-teaching the EDI nested-loop structure to design reporting used by finance and compliance.
+    \item Produced data-driven analysis that secured \$3M in HRSA grant funding; supervised two data analysts and trained 30 staff on FCS documentation standards.
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- DESC SHORE ---
+\needspace{5\baselineskip}
+\item{\cventry{2019--2021}{Project Manager, SHORE}{Downtown Emergency Service Center}{Seattle, WA}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Developed SQL- and Excel-based tracking tools; queried the CHASERS PostgreSQL database; built a vaccination tracker that helped achieve a 70\% vaccination rate.
+    \item Led DESC through its first Medicaid fee-for-service fidelity review and audit, resulting in a positive review and renewed contract.
+    \item Managed SHORE program expansion: staffing (team of 7), training 50+ staff, budgeting, and care-plan implementation.
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- DESC earlier ---
+\needspace{4\baselineskip}
+\item{\cventry{2016--2019}{Health Specialist / Case Manager / Residential Counselor}{Downtown Emergency Service Center}{Seattle, WA}{}{\vspace{1pt}
+\begin{itemize}
+    \item Managed caseloads of 45--50 clients in permanent supportive housing, gaining direct operational knowledge of housing documentation and data systems.
+    \item Developed health-literacy tools and coordinated care across behavioral health, primary care, and housing teams; co-presented at the 2018 PHPDA All Grantees Meeting.
 \end{itemize}}}
 
 \end{itemize}
@@ -114,46 +131,23 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
+\item{\cventry{2014}{B.S. Kinesiology (Pre-Physical Therapy Specialization)}{Western Washington University}{Bellingham, WA}{}{}}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
+\item{\cventry{}{Certificate, Medical Billing and Coding}{Bellingham Technical College}{Bellingham, WA}{}{}}
 
 \end{itemize}
 
 % ============================================================
-%     LANGUAGES
+%     CERTIFICATIONS
 % ============================================================
 
-\section{Languages}
+\section{Certifications}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
-\end{itemize}
-
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item Certified Scrum Product Owner (CSPO) -- Scrum Alliance.
+\item Organizational and Relationship Systems Coaching (ORSC) -- CRR Global.
 \end{itemize}
 
 % ============================================================

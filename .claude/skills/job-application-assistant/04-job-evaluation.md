@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** SQL, Power BI, Tableau, ETL pipeline design, data validation/QA, dashboard development, Medicaid/837 EDI billing data, HMIS & HUD CoC compliance, permanent supportive housing operations, Salesforce, PowerApps/Power Automate low-code automation
+**Moderate match areas:** Python, R, DAX, Apache Superset, QGIS/geospatial, Azure, Docker, GitHub, Agile/Scrum (CSPO), program/project management, grant reporting
+**Weak match areas:** Formal CS/statistics credentials, large-scale software engineering, advanced ML/modeling, languages other than English
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Housing/homelessness data & systems, Medicaid billing-data infrastructure, BI/dashboard reporting for public-sector & nonprofit programs, HMIS/CoC, program operations in supportive housing
+**Moderate:** Analytics engineering / BI engineering, civic-tech & public-interest data, grants/program operations, public-sector (county/city) analyst roles, mission-driven org operations
+**Entry-level:** Pure software-engineering roles, data-science/ML-research roles, executive-assistant/chief-of-staff roles (transferable ops skills but not a direct track)
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -62,20 +62,20 @@ Does this role advance career goals and contain tasks that energize?
 | 40-59 | Decent job but doesn't build toward career goals |
 | 0-39 | Dead end or backwards step |
 
-**Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+**Career goals:** *(draft from context — confirm/adjust)*
+- Move into a focused **data analyst / analytics engineer** role (away from blended program-management) while staying in mission-aligned work
+- Deepen technical depth (SQL/Python/BI) on a team with other data practitioners
+- Stay in housing/homelessness/public-interest data, or adjacent civic-tech / values-aligned orgs
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: building dashboards & data tools, ETL/pipeline work, turning messy program data into usable insight, prototyping, cross-sector data sharing
+- Tasks that drain: pure administrative/exec-support work with no data component, low-autonomy maintenance-only roles
+- Non-task factors: mission alignment, autonomy to propose/prototype, a team with technical peers, Pacific-aligned remote or Puget Sound hybrid
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: currently employed; can be selective
+- **Flexibility**: Seattle metro (in-person/hybrid) or Remote US Pacific-aligned; onsite outside Puget Sound is a deal-breaker absent relocation intent
+- **Professional development**: wants to grow technical/analytical depth, not just operational breadth
 
 ### 6. Salary Benchmark (Optional)
 

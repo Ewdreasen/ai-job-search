@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Ewan Andreasen
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Ewan Andreasen, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,68 +10,58 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Ewan Andreasen
+- **Location:** Seattle, WA (North Beacon Hill; Puget Sound in-person/hybrid, or Remote US Pacific-aligned)
+- **Languages:** English (native)
+- **Status:** Employed (KCRHA); open to new mission-aligned roles
+- **LinkedIn headline:** Data analyst in Seattle's housing & homelessness sector
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.S. in Kinesiology (Pre-Physical Therapy Specialization)** (conferred Dec 2014) - Western Washington University, Bellingham, WA
+- **Certificate, Medical Billing and Coding** - Bellingham Technical College
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Manager, Continuous System Improvement** (Feb 2025 - present) - **KCRHA** (Seattle, WA)
+  - Rebooted the Regional Services Database (public data utility model for cross-sector sharing)
+  - Built real-time Tableau dashboards in Azure; coordinated the 2026 Point-in-Time Count ($250K budget, 150+ volunteers)
+- **Manager, Healthcare Integration** (Oct 2021 - Feb 2025) - **Plymouth Housing** (Seattle, WA)
+  - Built ETL pipelines + Power BI; PowerApps Medicaid billing app drove 248% payment growth / $1.5M new revenue; secured $3M HRSA grant
+- **Project Manager, SHORE** (Mar 2019 - Oct 2021) - **DESC** (Seattle, WA)
+- **Health Specialist / Case Manager / Residential Counselor** (Mar 2016 - Mar 2019) - **DESC** (Seattle, WA)
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** SQL (PostgreSQL, SQLite), Power BI, Tableau, ETL pipeline design, data validation/QA, 837 EDI billing data, HMIS
+- **Secondary:** Python, R, DAX, Apache Superset, QGIS, Salesforce, PowerApps/Power Automate
+- **Domain:** Permanent supportive housing operations, Medicaid fee-for-service, HUD CoC compliance, 1115 waiver
+- **Software:** Azure, Docker, GitHub, Microsoft 365; AI-assisted development (Claude Code)
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Certified Scrum Product Owner (CSPO)** - Scrum Alliance
+- **Organizational and Relationship Systems Coaching (ORSC)** - CRR Global
 
-### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
-
-### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+### Presentations
+- Co-presenter, 2018 PHPDA All Grantees Meeting
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Resourceful self-teacher** - taught self 837 EDI, Python, BI tooling on the job
+- **Initiative-taker** - proposes and prototypes systems rather than waiting for direction
+- **Strengths:** Bridging technical, strategic, and frontline perspectives; cross-sector partnerships
+- **Growth areas:** Wants deeper technical/analytical specialization vs. blended program management
+- **Thrives in:** Mission-aligned, cross-functional teams with autonomy to build
+- *(No formal assessment on file - traits inferred from history; see 02-behavioral-profile.md)*
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Turning messy program data into tools and dashboards people actually use
+- Expanding equitable access to community data (housing/homelessness, public interest)
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Housing/homelessness data: KCRHA, CSH, Community Solutions, county/city HSD
+- Values-aligned / civic tech & EA-adjacent: Coefficient Giving, 80,000 Hours orgs
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Onsite-only roles outside Puget Sound (absent relocation intent)
+- Pure administrative/exec-support roles with no data component
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

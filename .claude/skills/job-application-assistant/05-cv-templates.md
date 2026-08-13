@@ -105,12 +105,14 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For data analyst / housing & homelessness data roles:**
+> Data analyst with ten years in Seattle's housing and homelessness sector, spanning direct service, program management, and data-infrastructure roles at DESC, Plymouth Housing, and KCRHA. Deep working knowledge of Medicaid billing data (837 EDI), HMIS, and the compliance environment governing permanent supportive housing. Builds SQL, Power BI, and Tableau reporting that turns program data into actionable insight for operational and compliance teams.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For analytics engineering / BI roles:**
+> Analytics-minded builder who designs ETL pipelines and BI dashboards (Power BI, Tableau, Apache Superset) on top of SQL/PostgreSQL and Python. Self-taught the 837 EDI standard and stood up reporting infrastructure that drove a 248% increase in Medicaid payment volume and $1.5M in new annual revenue. Comfortable across Azure, Docker, GitHub, and low-code automation (PowerApps, Power Automate).
+
+**For mission-driven operations / program roles:**
+> Operations and program leader with ten years in government, nonprofit, and behavioral-health/housing contexts. Combines hands-on data and systems work with budget, staffing, and cross-sector partnership management ($250K research budgets, $3M in secured grant funding, teams of 7+). Brings a proactive, AI-assisted approach (Claude Code) to removing operational bottlenecks.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.
