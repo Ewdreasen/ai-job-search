@@ -41,6 +41,8 @@ Roles at these orgs should be surfaced even on a "narrow" run — they are the p
 | 80,000 Hours job board (EA aggregator) | custom board | fetch | confirm |
 | King County, WA | NEOGOV | fetch | confirm |
 | City of Seattle | NEOGOV | fetch | confirm |
+| Downtown Seattle Association (DSA) | Paylocity | fetch | verified |
+| Intentional Futures (iF) | Paylocity | fetch | verified |
 
 ## Org details
 
@@ -136,6 +138,19 @@ Roles at these orgs should be surfaced even on a "narrow" run — they are the p
 - **Notes:** Local public-sector pipeline (Human Services Dept, Innovation & Performance team).
   Filter for analyst / data / research roles. Same NEOGOV JS-render caveat as King County —
   use the `site:` search fallback if the portal returns nothing.
+
+### Downtown Seattle Association (DSA)
+- **Method:** fetch (Paylocity)
+- **Careers (human):** https://downtownseattle.org/about/careers/
+- **Portal (Paylocity board):** https://recruiting.paylocity.com/recruiting/jobs/All/a2b85506-9b07-4508-bd3f-e7c371da4f68/Downtown-Seattle-Association
+- **Priority flag:** WARM LEAD — Ewan's former supervisor recommended him for a **Data Analyst** role here (noted 2026-07-16). Surface any data/analyst/BI/evaluation posting prominently, even on a narrow run. The role may not be posted yet; keep checking the Paylocity board.
+- **Notes:** Seattle downtown-improvement nonprofit (Metropolitan Improvement District). Paylocity has no clean public JSON; WebFetch the portal URL and extract openings from HTML. As of 2026-07-16 the board showed ops/ambassador/HR roles but no data analyst posting yet.
+
+### Intentional Futures (iF)
+- **Method:** fetch (Paylocity)
+- **Careers (human):** https://intentionalfutures.com/about#contact-us  ("Join our team")
+- **Portal (Paylocity board):** https://recruiting.paylocity.com/recruiting/jobs/All/b2a7e4cd-1b98-48e0-9390-69e5148bac7e/Intentional-Futures-LCC
+- **Notes:** Seattle idea-to-impact consultancy (~35 staff, founded 2010) working with mission-driven / social-impact clients. Values-aligned. Paylocity has no clean public JSON; WebFetch the portal URL and extract openings from HTML. Surface any data/analyst/research/strategy/BI role. Also follow their LinkedIn for postings.
 
 ## Adding orgs
 

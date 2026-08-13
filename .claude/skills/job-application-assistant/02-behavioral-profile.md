@@ -1,50 +1,27 @@
 # Behavioral Profile
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- You can use results from PI, DISC, Myers-Briggs, StrengthsFinder, or a self-assessment -->
+> **Note:** No formal assessment (PI, DISC, etc.) was provided at setup. The traits below are **inferred from resume language, certifications, and career trajectory** and are labeled as such. *Replace with a formal assessment when available — review critically before relying on these in applications.*
 
 ## Overview
-[YOUR_NAME]'s behavioral assessment identifies them as a **[PROFILE_TYPE]** pattern. [1-2 SENTENCE_SUMMARY].
+Ewan presents as a **collaborative builder-operator**: someone who bridges frontline service, program operations, and self-taught technical work. The throughline across a decade in Seattle's housing/homelessness sector is using data and systems to expand a community's access to its own information. *[Inferred — review before relying on this]*
 
-## Core Behavioral Drives
+## Strongest Behavioral Traits *(inferred)*
+- **Resourceful self-teacher:** Self-taught the 837 EDI nested-loop standard, Python, and BI tooling on the job to build infrastructure others depended on. *[Inferred from resume]*
+- **Initiative / proposer:** Repeatedly proposed and stood up new systems (public data utility model, appointment-reminder process, PiT web-app POC) rather than waiting for direction. *[Inferred from resume]*
+- **Bridge-builder:** Connects technical work to strategy and frontline needs; established cross-org partnerships (Swedish, UW Medicine, Providence PACE, CSH, WA HCA). *[Inferred]*
+- **Mission-driven:** Frames work around community uplift and equitable access to data. *[Inferred]*
 
-| Drive | Level | Meaning |
-|-------|-------|---------|
-| [DRIVE_1] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_2] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_3] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_4] | [LEVEL] | [DESCRIPTION] |
+## How Ewan Works Best *(inferred)*
+- Cross-functional environments where technical and human/strategic sides meet
+- Autonomy to propose and prototype solutions
+- Mission-aligned organizations (housing, public-interest, civic tech)
 
-## Strongest Behaviors
-- **[BEHAVIOR_1]:** [DESCRIPTION]
-- **[BEHAVIOR_2]:** [DESCRIPTION]
-- **[BEHAVIOR_3]:** [DESCRIPTION]
-
-## How You Work Best
-- [ENVIRONMENT_PREFERENCE_1]
-- [ENVIRONMENT_PREFERENCE_2]
-- [ENVIRONMENT_PREFERENCE_3]
-
-## Growth Areas (frame positively in applications)
-- **[AREA_1]:** [HOW_TO_FRAME_IT_POSITIVELY]
-- **[AREA_2]:** [HOW_TO_FRAME_IT_POSITIVELY]
-
-## Mapping to Job Posting Language
-
-When a job posting mentions these keywords, it's a **strong behavioral fit**:
-- [KEYWORD_OR_PHRASE_THAT_MATCHES_YOUR_STYLE]
-- [ANOTHER_KEYWORD]
-
-When a job posting mentions these, flag as **potential friction** (not deal-breaker):
-- [KEYWORD_OR_PHRASE_THAT_MIGHT_CLASH]
-- [ANOTHER_KEYWORD]
-
-## Management Style Preferences
-- [WHAT_MANAGEMENT_STYLE_WORKS_FOR_YOU]
-- [WHAT_DOESN'T_WORK]
+## Coaching / Communication Signal
+- **ORSC training (CRR Global):** relationship-systems coaching background suggests strength in facilitation, stakeholder alignment, and constructive feedback. *[Inferred from certification]*
+- **CSPO:** comfortable in product-owner / stakeholder-translation posture.
 
 ## Using This in Applications
-- **Cover letters:** [HOW_TO_WEAVE_IN_BEHAVIORAL_STRENGTHS]
-- **CV:** [WHAT_TO_EMPHASIZE]
-- **Interviews:** [WHAT_STAR_EXAMPLES_TO_USE]
-- **Don't overstate:** [WHAT_NOT_TO_CLAIM]
+- **Cover letters:** Lead with the build-and-bridge story (turning messy program data into tools people use). Warm, direct, community-grounded voice — not combative, not over-humble.
+- **CV:** Emphasize measurable outcomes (248% payment growth, $1.5M revenue, $3M grant, 70% vaccination rate, $250K budget).
+- **Interviews:** Be ready to address the Director→Manager title change matter-of-factly (2025 reorg), framed forward-looking.
+- **Don't overstate:** No formal behavioral assessment on file — keep claims grounded in concrete examples.

@@ -10,30 +10,72 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 ## Ready-Made STAR Examples
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+<!-- Full STAR-LA (Situation, Task, Actions, Result, Learning, Application). -->
+<!-- Learning + Application are the differentiators — rehearse those two lines. -->
+<!-- A role-specific, fully-worked set lives in documents/applications/city_of_seattle_evaluation_advisor/interview_prep_starla.md -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+## STAR-LA Examples
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 1. Medicaid billing application — 248% payment growth (PowerApps / billing-data)
+**Source:** Plymouth Housing, Manager Healthcare Integration
+**Use for:** "process you improved", "strategic change you initiated", "self-taught skill", "drove results"
+- **S:** FCS Medicaid billing was manual and under-collecting, with no reporting infrastructure.
+- **T:** Build enrollment/billing tooling and compliant reporting.
+- **A:** Self-taught the 837 EDI nested-loop structure; built a PowerApps app + ETL feeding Power BI, designed around billing staff's workflow.
+- **R:** 248% increase in payment-processing volume; $1.5M new annual revenue.
+- **L:** The improvement stuck because I built it around the people doing the work, not the data model.
+- **A:** I bring that design-with-the-user discipline to any workflow redesign or reporting build.
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. KCRHA benchmarking + Tableau dashboards (data → system change)
+**Source:** KCRHA, Manager Continuous System Improvement
+**Use for:** "used data to drive change", "evaluation strategy", "KPIs / performance gaps"
+- **S:** Leadership had no shared baseline to see where CoC programs underperformed.
+- **T:** Build system-wide performance analysis to direct improvement priorities.
+- **A:** Analyzed CoC program performance, benchmarked peer regions (Portland, SF, LA), built real-time Tableau dashboards in Azure.
+- **R:** Gave leadership an evidence-based picture that shaped resource-allocation and planning.
+- **L:** A dashboard drives change only if built around the decision someone needs to make.
+- **A:** I start evaluation work from the decisions leadership needs, then build KPIs/dashboards backward.
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+### 3. Cross-sector partnerships (influence without authority)
+**Source:** Plymouth Housing
+**Use for:** "influence without authority", "difficult stakeholder", "diverse backgrounds"
+- **S:** Expanding housing-based healthcare needed buy-in from external clinical partners I didn't manage.
+- **T:** Align Swedish, UW Medicine, and Providence ElderPlace PACE around shared processes.
+- **A:** Used ORSC facilitation to build partnerships and translate between clinical and housing priorities.
+- **R:** Partnerships held; supported the analysis that secured $3M in HRSA funding, which stood up the onsite integrated-care clinic at Plymouth Crossing (with Vituity).
+- **L:** Influence without authority runs on translating each stakeholder's priorities into a shared goal.
+- **A:** I lead cross-team work by finding the shared outcome first. (ElderPlace PACE = aging/LTC touchpoint.)
+
+### 6. $3M HRSA grant → integrated-care model (data → executive strategy)
+**Source:** Plymouth Housing, Manager Healthcare Integration
+**Use for:** "analysis that drove a strategic decision", "translating data into strategy", "communicating to senior stakeholders"
+- **S:** PSH residents faced barriers accessing offsite healthcare; we needed to fund and prove a care-where-you-live model.
+- **T:** Make the data case for an integrated in-housing care model and secure funding.
+- **A:** Built outcome/cost visualizations that secured $3M in HRSA funding; it stood up an onsite drop-in clinic + integrated-care pilot at Plymouth Crossing (with Vituity), planned to extend via a mobile medical van rotating providers across the full PSH portfolio.
+- **R:** Pilot became the basis for re-modeling how supportive housing and healthcare integrate across the PSH network, not just one site.
+- **L:** Data's real power is making the case for a new service model, not just reporting on the old one.
+- **A:** I use system-wide data to justify and shape how services get delivered, then evaluate whether the new model works.
+
+### 4. DESC first Medicaid FFS fidelity review/audit (CQI / accountability)
+**Source:** DESC, Project Manager SHORE
+**Use for:** "challenging problem solved", "CQI cycle", "accountability structures"
+- **S:** DESC faced its first Medicaid fee-for-service fidelity review, contract at stake.
+- **T:** Pass the review and fix the gaps it exposed.
+- **A:** Built SQL tracking tools and monthly quant/qual analysis; identified compliance gaps; led remediation.
+- **R:** Positive review and renewed contract.
+- **L:** Accountability works best when the measurement is in place before the review, not scrambled after.
+- **A:** I build accountability structures and KPIs into the workflow up front. (Honest substitute for a "formal PDSA cycle" if not Lean-certified.)
+
+### 5. 2026 Point-in-Time Count ($250K, 150+ volunteers)
+**Source:** KCRHA
+**Use for:** "managing complexity", "under pressure", "data integrity"
+- **S/T:** Coordinate regional PiT Count data collection.
+- **A:** Managed 28 sites, 150+ volunteers, 32 surveyors, $250K budget, data-integrity controls across ~2,000 surveys.
+- **R:** [Add completion / data-quality outcome once you have the figure.]
+- **L:** At scale, data quality is designed in up front, not cleaned up after.
+- **A:** I bring up-front data-integrity discipline to evaluation and reporting.
+
+<!-- Add more as needed. Story bank also includes: Regional Services Database reboot (ambiguity/initiative), $3M HRSA data storytelling (communicating to senior stakeholders), vaccination tracking 70% (technical problem-solving), supervising 2 analysts / training 30+ (mentorship). -->
 
 ## Common Tough Questions
 
